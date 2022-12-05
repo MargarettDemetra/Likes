@@ -1,9 +1,10 @@
 fun main(){
-    val likes = 30
-    val lastCharacter = likes%10
+    val likes = 21
+    val lastNumber = likes%10
+    val twoLastNumber = likes%100
     val one = "человеку"
     val count = "людям"
 
-    val result = if(lastCharacter == 1) one else count
-    println(result)
+    val result = if( twoLastNumber == 11) count else if(lastNumber == 1) one else count
+    println("Понравилось $likes $result")
 }
