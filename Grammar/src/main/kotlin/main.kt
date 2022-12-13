@@ -9,39 +9,31 @@ fun main(){
     //println("Понравилось $likes $result")
 
 
-    val second = 2531
+    val second = 43923
     val minute = second/60
     val hour = minute/60
 
-    val lustMinute = minute%10
+    val lastMinute = minute%10
 
-    val minuteOne = "минуту"
-    val minutes = "минут"
-    val otherMinute = "минуты"
-
-    val hourOne = "час"
-    val hours = "часа"
-    val otherHour = "часов"
-
-    val totalX = when(lustMinute){
-        1 -> minuteOne
-        2 -> otherMinute
-        else ->minutes
+    val totalX = when(lastMinute){
+        1 -> "минуту"
+        2 -> "минуты"
+        else -> "минут"
     }
 
     val totalMinute = when(minute){
-        1 -> minuteOne
-        in 2 .. 4 -> otherMinute
-        in 5 .. 20 -> minutes
+        1 -> "минуту"
+        in 2 .. 4 -> "минуты"
+        in 5 .. 20 -> "минут"
         else -> totalX
     }
 
     val totalHour = when(hour){
-        1 -> hourOne
-        in 2 .. 4 -> hours
-        in 5 .. 20 -> otherHour
-        21 -> hourOne
-        else -> hours
+        1 -> "час"
+        in 2 .. 4 -> "часа"
+        in 5 .. 20 -> "часов"
+        21 -> "час"
+        else -> "часа"
     }
 
     val agoToText = when(second) {
